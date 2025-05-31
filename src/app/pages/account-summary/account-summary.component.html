@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="accountsMenu">Accounts</button>
+  <mat-menu #accountsMenu="matMenu">
+    <button mat-menu-item routerLink="/account-summary">Account Summary</button>
+    <button mat-menu-item routerLink="/transactions">Transactions</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="profileMenu">Profile</button>
+  <mat-menu #profileMenu="matMenu">
+    <button mat-menu-item routerLink="/settings">Settings</button>
+    <button mat-menu-item routerLink="/logout">Logout</button>
+  </mat-menu>
+</mat-toolbar>
+
+<h2>Account Summary</h2>
+<h3>Last Name: {{ lastName }}</h3>
+<div *ngFor="let account of accounts" class="account-summary-card">
+  <ul>
+    <li><strong>Account Name:</strong> {{ account.acctname }}</li>
+    <li><strong>Account Number:</strong> {{ account.acctnum }}</li>
+    <li><strong>Balance:</strong> ${{ account.balance }}</li>
+    <li><strong>Status:</strong> {{ account.status }}</li>
+  </ul>
+</div>
