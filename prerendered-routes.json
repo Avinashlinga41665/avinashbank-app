@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/avinashbank-app": {},
+    "/avinashbank-app/AccountSummary": {},
+    "/avinashbank-app/Register": {},
+    "/avinashbank-app/dashboard": {}
+  }
+}
