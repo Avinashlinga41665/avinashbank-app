@@ -1,19 +1,41 @@
+<!-- First toolbar: Bank name left, Last name dropdown right -->
+<mat-toolbar color="primary" class="toolbar">
+  <span class="toolbar-title">Avinash Bank</span>
+  <span class="flex-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="Lastname">{{ lastName }}</button>
+
+  <mat-menu #Lastname="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="profileMenu">Profile</button>
+    <button mat-menu-item [matMenuTriggerFor]="SettingMenu">Settings</button>
+  </mat-menu>
+
+  <mat-menu #profileMenu="matMenu">
+    <button mat-menu-item routerLink="/UserID">User ID</button>
+    <button mat-menu-item routerLink="/EmailID">Email Address</button>
+    <button mat-menu-item routerLink="/Phone">Phone</button>
+  </mat-menu>
+
+  <mat-menu #SettingMenu="matMenu">
+    <button mat-menu-item routerLink="/Alerts">Advanced Alerts</button>
+    <button mat-menu-item routerLink="/EmailID">Email Address</button>
+    <button mat-menu-item routerLink="/Phone">Phone</button>
+  </mat-menu>
+</mat-toolbar>
+
+<!-- Second toolbar: Accounts and other buttons -->
 <mat-toolbar color="primary">
   <button mat-button [matMenuTriggerFor]="accountsMenu">Accounts</button>
   <mat-menu #accountsMenu="matMenu">
     <button mat-menu-item routerLink="/account-summary">Account Summary</button>
-    <button mat-menu-item routerLink="/transactions">Transactions</button>
+    <button mat-menu-item routerLink="/transactions">E Statements</button>
+    <button mat-menu-item routerLink="/EPreference">E Preference</button>
   </mat-menu>
-
-  <button mat-button [matMenuTriggerFor]="profileMenu">Profile</button>
-  <mat-menu #profileMenu="matMenu">
-    <button mat-menu-item routerLink="/settings">Settings</button>
-    <button mat-menu-item routerLink="/logout">Logout</button>
-  </mat-menu>
+  <button mat-button routerLink="/Transfer">Transfer</button>
+  <button mat-button routerLink="/Cards">Cards</button>
 </mat-toolbar>
 
+<!-- Account summary section -->
 <h2>Account Summary</h2>
-<h3>Last Name: {{ lastName }}</h3>
 <div *ngFor="let account of accounts" class="account-summary-card">
   <ul>
     <li><strong>Account Name:</strong> {{ account.acctname }}</li>

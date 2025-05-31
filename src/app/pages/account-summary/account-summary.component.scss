@@ -1,0 +1,13 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
