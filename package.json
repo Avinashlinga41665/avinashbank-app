@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:AvinashBank-App-frontend": "node dist/avinash-bank-app-frontend/server/server.mjs",
-    "deploy": "ng build --output-path=dist/avinash-bank-app-frontend/browser --base-href=/avinashbank-app/ && npx angular-cli-ghpages --dir=dist/avinash-bank-app-frontend/browser"
+    "deploy": "ng build --output-path=dist/avinash-bank-app-frontend/ --base-href=/avinashbank-app/ && npx angular-cli-ghpages --dir=dist/avinash-bank-app-frontend/browser"
 
   },
   "private": true,
