@@ -1,28 +1,28 @@
-<!-- First toolbar: Bank name left, Last name dropdown right -->
 <mat-toolbar color="primary" class="toolbar">
   <span class="toolbar-title">Avinash Bank</span>
   <span class="flex-spacer"></span>
-  <button mat-button [matMenuTriggerFor]="Lastname">{{ lastName }}</button>
 
-  <mat-menu #Lastname="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="profileMenu">Profile</button>
-    <button mat-menu-item [matMenuTriggerFor]="SettingMenu">Settings</button>
-  </mat-menu>
+  <p class="Lastname" style="margin-left: auto;"><button mat-button [matMenuTriggerFor]="Lastname">{{ lastName }}</button></p>
+ 
+<mat-menu #Lastname="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="profileMenu">Profile</button>
+  <button mat-menu-item [matMenuTriggerFor]="settingMenu">Settings</button>
+</mat-menu>
 
-  <mat-menu #profileMenu="matMenu">
-    <button mat-menu-item routerLink="/UserID">User ID</button>
-    <button mat-menu-item routerLink="/EmailID">Email Address</button>
-    <button mat-menu-item routerLink="/Phone">Phone</button>
-  </mat-menu>
+<mat-menu #profileMenu="matMenu" xPosition="after" yPosition="below">
+  <button mat-menu-item routerLink="/UserID">User ID</button>
+  <button mat-menu-item routerLink="/EmailID">Email Address</button>
+  <button mat-menu-item routerLink="/Phone">Phone</button>
+</mat-menu>
 
-  <mat-menu #SettingMenu="matMenu">
-    <button mat-menu-item routerLink="/Alerts">Advanced Alerts</button>
-    <button mat-menu-item routerLink="/EmailID">Email Address</button>
-    <button mat-menu-item routerLink="/Phone">Phone</button>
-  </mat-menu>
+<mat-menu #settingMenu="matMenu" xPosition="after" yPosition="below">
+  <button mat-menu-item routerLink="/Alerts">Advanced Alerts</button>
+  <button mat-menu-item routerLink="/EmailID">Email Address</button>
+  <button mat-menu-item routerLink="/Phone">Phone</button>
+</mat-menu>
+
 </mat-toolbar>
 
-<!-- Second toolbar: Accounts and other buttons -->
 <mat-toolbar color="primary">
   <button mat-button [matMenuTriggerFor]="accountsMenu">Accounts</button>
   <mat-menu #accountsMenu="matMenu">

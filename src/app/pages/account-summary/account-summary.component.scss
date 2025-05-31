@@ -1,5 +1,6 @@
 .toolbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -10,4 +11,8 @@
 
 .flex-spacer {
   flex: 1 1 auto;
+}
+::ng-deep .mat-menu-panel {
+  /* Adjust submenu vertical offset if needed */
+  margin-top: 4px;
 }
