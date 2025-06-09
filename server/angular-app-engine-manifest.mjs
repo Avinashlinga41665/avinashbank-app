@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/avinashbank-app',
+  basePath: 'https://avinashlinga41665.github.io/avinashbank-app',
   supportedLocales: {
   "en-US": ""
 },
