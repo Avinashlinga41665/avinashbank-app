@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/": {},
+    "/AccountSummary": {},
+    "/ForgotPassword": {},
+    "/Register": {},
+    "/dashboard": {}
+  }
+}
