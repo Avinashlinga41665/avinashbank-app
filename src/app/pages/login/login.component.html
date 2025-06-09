@@ -1,19 +1,15 @@
-<div class="login-container">
-  <h2>Login</h2>
-  <form>
-    <div class="form-field">
-      <label for="email">Email</label>
-      <input id="email" type="email" />
-    </div>
-    <div class="form-field">
-      <label for="password">Password</label>
-      <input id="password" type="password" />
-    </div>
-    <a routerLink="/ForgotPassword">ForgotPassword</a>
-    <button class="login-button" [routerLink] ="['/AccountSummary']" type="submit">Login</button>
-    <div class="register-link">
-      Don't have an account?
-      <a routerLink="/Register">Register</a>
-    </div>
-  </form>
-</div>
+<form (ngSubmit)="onLogin()">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="email" name="email" required email />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="password" name="password" required type="password" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!email || !password">
+    Login
+  </button>
+</form>
