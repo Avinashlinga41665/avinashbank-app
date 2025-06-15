@@ -12,6 +12,6 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head><li
 </style><link rel="stylesheet" href="styles-36AW6TKX.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-36AW6TKX.css"></noscript></head>
 <body class="mat-typography">
   <app-root ng-version="19.2.13" ng-server-context="ssg"><router-outlet></router-outlet><app-forgot-password><div><h2>Forgot Password</h2><h3>Required fields: </h3><p>User ID, Email Address, and one of the Optional fields</p><p>User ID</p><input id="UserID" type="text"><p> Last name</p><input id="Lastname" type="text"><p>Email Address</p><input id="Emailid" type><p>mobile Number</p><input id="Mobilenum" type><p><button> Cancel</button><button> Submit</button></p></div></app-forgot-password><!----></app-root>
-<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-7IT6DNZN.js" type="module"></script>
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-LMULJA4A.js" type="module"></script>
 
 </body></html>`;
